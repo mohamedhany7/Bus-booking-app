@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="267.0" style="-fx-background-color: #a0a2ab;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busstation.DrivertripsController">
+   <children>
+      <TextArea fx:id="txt" editable="false" layoutX="14.0" layoutY="14.0" prefHeight="517.0" prefWidth="240.0" promptText="You don't have trips for now" />
+   </children>
+</AnchorPane>

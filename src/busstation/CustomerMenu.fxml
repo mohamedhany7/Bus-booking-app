@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="267.0" style="-fx-background-color: #a0a2ab;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busstation.CustomerMenuController">
+   <children>
+      <TabPane layoutY="1.0" prefHeight="548.0" prefWidth="267.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="BUS">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="370.0" prefWidth="200.0">
+                     <children>
+                        <TabPane layoutX="7.0" layoutY="107.0" prefHeight="517.6" prefWidth="267.2" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <tabs>
+                            <Tab text="Internal Trip">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="internalbusbookBTN" layoutX="54.0" layoutY="414.0" mnemonicParsing="false" onAction="#book1" prefHeight="26.0" prefWidth="154.0" style="-fx-background-color: #2196f3;" text="Book" />
+                                          <HBox layoutX="43.0" layoutY="371.0" prefHeight="27.0" prefWidth="194.0">
+                                             <children>
+                                                <RadioButton fx:id="internalBusOnewayRadio" mnemonicParsing="false" onAction="#selectinternalonewaybus" selected="true" text="One way trip">
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="trip" />
+                                                   </toggleGroup>
+                                                </RadioButton>
+                                                <RadioButton fx:id="internalBusRoundtripRadioBtn" mnemonicParsing="false" onAction="#selectinternalroundbus" text="Round trip" toggleGroup="$trip" />
+                                             </children>
+                                          </HBox>
+                                          <ComboBox fx:id="internalbuscombo" layoutX="14.0" layoutY="328.0" prefHeight="26.0" prefWidth="238.0" promptText="Choose your trip" />
+                                          <TextArea fx:id="internalBusText" editable="false" prefHeight="322.0" prefWidth="267.0" />
+                                       </children></AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="External Trip">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="externalbusbookBTN" layoutX="56.0" layoutY="418.0" mnemonicParsing="false" onAction="#book2" prefHeight="26.0" prefWidth="154.0" style="-fx-background-color: #2196f3;" text="Book" />
+                                          <HBox layoutX="42.0" layoutY="359.0" prefHeight="27.0" prefWidth="194.0">
+                                             <children>
+                                                <RadioButton fx:id="externalBusOnewayRadio" mnemonicParsing="false" onAction="#selectexternalonewaybus" selected="true" text="One way trip">
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="trip1" />
+                                                   </toggleGroup>
+                                                </RadioButton>
+                                                <RadioButton fx:id="externalBusRoundtripRadio" mnemonicParsing="false" onAction="#selectexternalroundbus" text="Round trip" toggleGroup="$trip1" />
+                                             </children>
+                                          </HBox>
+                                          <ComboBox fx:id="externalBuscombo" layoutX="14.0" layoutY="328.0" prefHeight="26.0" prefWidth="238.0" promptText="Choose your trip" />
+                                          <TextArea fx:id="externalBusText" editable="false" prefHeight="322.0" prefWidth="267.0" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="MINI BUS">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane prefHeight="517.6" prefWidth="267.2" tabClosingPolicy="UNAVAILABLE">
+                           <tabs>
+                              <Tab text="Internal Trip">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="internalminibookBTN" layoutX="54.0" layoutY="414.0" mnemonicParsing="false" onAction="#book3" prefHeight="26.0" prefWidth="154.0" style="-fx-background-color: #2196f3;" text="Book" />
+                                          <HBox layoutX="43.0" layoutY="371.0" prefHeight="27.0" prefWidth="194.0">
+                                             <children>
+                                                <RadioButton fx:id="internalMiniOnewayRadio" mnemonicParsing="false" onAction="#selectinternalonewaymini" selected="true" text="One way trip">
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="trip11" />
+                                                   </toggleGroup>
+                                                </RadioButton>
+                                                <RadioButton fx:id="internalMiniRoundtripRadio" mnemonicParsing="false" onAction="#selectinternalroundmini" text="Round trip" toggleGroup="$trip11" />
+                                             </children>
+                                          </HBox>
+                                          <ComboBox fx:id="internalMinicombo" layoutX="14.0" layoutY="328.0" prefHeight="26.0" prefWidth="238.0" promptText="Choose your trip" />
+                                          <TextArea fx:id="internalMiniText" editable="false" prefHeight="322.0" prefWidth="267.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="External Trip">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="externalminibookBTN" layoutX="56.0" layoutY="418.0" mnemonicParsing="false" onAction="#book4" prefHeight="26.0" prefWidth="154.0" style="-fx-background-color: #2196f3;" text="Book" />
+                                          <HBox layoutX="42.0" layoutY="359.0" prefHeight="27.0" prefWidth="194.0">
+                                             <children>
+                                                <RadioButton fx:id="externalMiniOnewayRadio" mnemonicParsing="false" onAction="#selectexternalonewaymini" selected="true" text="One way trip">
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="trip13" />
+                                                   </toggleGroup></RadioButton>
+                                                <RadioButton fx:id="externalMiniRoundtrip" mnemonicParsing="false" onAction="#selectexternalroundmini" text="Round trip" toggleGroup="$trip13" />
+                                             </children>
+                                          </HBox>
+                                          <ComboBox fx:id="externalMinicombo" layoutX="14.0" layoutY="328.0" prefHeight="26.0" prefWidth="238.0" promptText="Choose your trip" />
+                                          <TextArea fx:id="externalMiniText" editable="false" prefHeight="322.0" prefWidth="267.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="LIMOSINE">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane prefHeight="517.6" prefWidth="267.2" tabClosingPolicy="UNAVAILABLE">
+                           <tabs>
+                              <Tab text="Internal Trip">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="internallimosinebookBTN" layoutX="54.0" layoutY="414.0" mnemonicParsing="false" onAction="#book5" prefHeight="26.0" prefWidth="154.0" style="-fx-background-color: #2196f3;" text="Book" />
+                                          <HBox layoutX="43.0" layoutY="371.0" prefHeight="27.0" prefWidth="194.0">
+                                             <children>
+                                                <RadioButton fx:id="internalLimosineOnewayRadio" mnemonicParsing="false" onAction="#selectinternalonewaymini" selected="true" text="One way trip">
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="trip12" />
+                                                   </toggleGroup>
+                                                </RadioButton>
+                                                <RadioButton fx:id="internalLimosineRoundtripRadio" mnemonicParsing="false" onAction="#selectinternalroundbus" text="Round trip" toggleGroup="$trip12" />
+                                             </children>
+                                          </HBox>
+                                          <ComboBox fx:id="internallimosinecombo" layoutX="14.0" layoutY="328.0" prefHeight="26.0" prefWidth="238.0" promptText="Choose your trip" />
+                                          <TextArea fx:id="internalLimosineText" editable="false" prefHeight="322.0" prefWidth="267.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="External Trip">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="externallimosinebookBTN" layoutX="56.0" layoutY="418.0" mnemonicParsing="false" onAction="#book6" prefHeight="26.0" prefWidth="154.0" style="-fx-background-color: #2196f3;" text="Book" />
+                                          <HBox layoutX="42.0" layoutY="359.0" prefHeight="27.0" prefWidth="194.0">
+                                             <children>
+                                                <RadioButton fx:id="externalLimosineOnewayRadio" mnemonicParsing="false" onAction="#selectexternalonewaylimo" selected="true" text="One way trip">
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="trip14" />
+                                                   </toggleGroup></RadioButton>
+                                                <RadioButton fx:id="externalLimosineRoundtripRadio" mnemonicParsing="false" onAction="#selectexternalroundbus" text="Round trip" toggleGroup="$trip14" />
+                                             </children>
+                                          </HBox>
+                                          <ComboBox fx:id="externallimosinecombo" layoutX="14.0" layoutY="328.0" prefHeight="26.0" prefWidth="238.0" promptText="Choose your trip" />
+                                          <TextArea fx:id="externalLimosineText" editable="false" prefHeight="322.0" prefWidth="267.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

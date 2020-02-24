@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="BusStation">
+  <ClassDiagramComponents>
+    <Class name="AddtripController" package="busstation" visibility="public" xPosition="626.0" yPosition="467.0">
+      <Fields>
+        <Field name="sourceTxt" type="TextField" visibility="private"/>
+        <Field name="destTxt" type="TextField" visibility="private"/>
+        <Field name="stopsTxt" type="TextField" visibility="private"/>
+        <Field name="priceTxt" type="TextField" visibility="private"/>
+        <Field name="internalRadio" type="RadioButton" visibility="private"/>
+        <Field name="trip" type="ToggleGroup" visibility="private"/>
+        <Field name="externalRadio" type="RadioButton" visibility="private"/>
+        <Field name="busRadio" type="RadioButton" visibility="private"/>
+        <Field name="vehicle" type="ToggleGroup" visibility="private"/>
+        <Field name="miniRadio" type="RadioButton" visibility="private"/>
+        <Field name="limosineRadio" type="RadioButton" visibility="private"/>
+        <Field name="Btn" type="ComboBox" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="setbuttons" returnType="void" visibility="public"/>
+        <Method name="cleartext" returnType="void" visibility="public"/>
+        <Method name="setminiradio" returnType="void" visibility="public"/>
+        <Method name="setlimosineradio" returnType="void" visibility="public"/>
+        <Method name="setbusradio" returnType="void" visibility="public"/>
+        <Method name="setexternalradio" returnType="void" visibility="public"/>
+        <Method name="setinternalradio" returnType="void" visibility="public"/>
+        <Method name="addbutton" returnType="void" visibility="public"/>
+        <Method name="fillsplit" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AlltripsController" package="busstation" visibility="public" xPosition="1254.0" yPosition="20.0">
+      <Fields>
+        <Field name="holderpane" type="AnchorPane" visibility="private"/>
+        <Field name="home" type="AnchorPane" visibility="package"/>
+        <Field name="triplbl" type="TextArea" visibility="private"/>
+        <Field name="btn" type="ComboBox" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="printall" returnType="void" visibility="public"/>
+        <Method name="fillsplit" returnType="void" visibility="public"/>
+        <Method name="delete" returnType="void" visibility="public"/>
+        <Method name="setnode" returnType="void" visibility="private">
+          <Argument type="Node" name="node"/>
+        </Method>
+        <Method name="createtrips" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="BusStation" package="busstation" visibility="public" xPosition="565.0" yPosition="1008.0">
+      <Fields>
+        <Field name="index" type="int" visibility="package" isStatic="true"/>
+        <Field name="no_customer" type="int" visibility="package" isStatic="true"/>
+        <Field name="no_manager" type="int" visibility="package" isStatic="true"/>
+        <Field name="no_driver" type="int" visibility="package" isStatic="true"/>
+        <Field name="customer_id" type="int" visibility="package" isStatic="true"/>
+        <Field name="manager_id" type="int" visibility="package" isStatic="true"/>
+        <Field name="driver_id" type="int" visibility="package" isStatic="true"/>
+        <Field name="trip_id" type="int" visibility="package" isStatic="true"/>
+        <Field name="no_tickets" type="int" visibility="package" isStatic="true"/>
+        <Field name="mytriptypenumber" type="int" visibility="package" isStatic="true"/>
+        <Field name="no_all_trips" type="int" visibility="package" isStatic="true"/>
+        <Field name="passenger_array" type="String[][]" visibility="package" isStatic="true"/>
+        <Field name="manager_array" type="String[][]" visibility="package" isStatic="true"/>
+        <Field name="driver_array" type="String[][]" visibility="package" isStatic="true"/>
+        <Field name="trips_array" type="String[][]" visibility="package" isStatic="true"/>
+        <Field name="addedtrips_array" type="String[][]" visibility="package" isStatic="true"/>
+        <Field name="tempdrivertrips_array" type="String[]" visibility="package" isStatic="true"/>
+        <Field name="tickets_array" type="String[][]" visibility="package" isStatic="true"/>
+        <Field name="ticket_line" type="int[]" visibility="package" isStatic="true"/>
+        <Field name="temptickets" type="String" visibility="package" isStatic="true"/>
+        <Field name="tempseats" type="String" visibility="package" isStatic="true"/>
+        <Field name="alltrips_array" type="String" visibility="package" isStatic="true"/>
+        <Field name="tempalltrips_array" type="String" visibility="package" isStatic="true"/>
+        <Field name="remember_username" type="String" visibility="package" isStatic="true"/>
+        <Field name="remember" type="boolean" visibility="package" isStatic="true"/>
+        <Field name="mycustomer" type="Customer" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="check2" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="String" name="str"/>
+          <Argument type="String" name="str1"/>
+          <Argument type="int" name="k"/>
+        </Method>
+        <Method name="check" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="String" name="str"/>
+          <Argument type="String" name="str1"/>
+          <Argument type="String" name="str2"/>
+        </Method>
+        <Method name="fillarray" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="getId" returnType="void" visibility="public" isStatic="true">
+          <Argument type="int" name="i"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BusStationController" package="busstation" visibility="public" xPosition="1865.0" yPosition="438.0">
+      <Fields>
+        <Field name="signupBtn" type="Button" visibility="private"/>
+        <Field name="usernameLabel" type="TextField" visibility="private"/>
+        <Field name="passwordLabel" type="PasswordField" visibility="private"/>
+        <Field name="loginBtn" type="Button" visibility="private"/>
+        <Field name="remembermeCheckbox" type="CheckBox" visibility="private" isStatic="true"/>
+        <Field name="passengerRadio" type="RadioButton" visibility="private" isStatic="true"/>
+        <Field name="type" type="ToggleGroup" visibility="private"/>
+        <Field name="managerRadio" type="RadioButton" visibility="private" isStatic="true"/>
+        <Field name="driverRadio" type="RadioButton" visibility="private" isStatic="true"/>
+        <Field name="username" type="String" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="loginAction" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="signup" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+        <Method name="selectpassanger" returnType="void" visibility="public"/>
+        <Method name="selectManager" returnType="void" visibility="public"/>
+        <Method name="selectDriver" returnType="void" visibility="public"/>
+        <Method name="rememberme" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Customer" package="busstation" visibility="public" xPosition="53.0" yPosition="381.0">
+      <Fields>
+        <Field name="trips" type="Trip[]" visibility="public"/>
+        <Field name="number_trips" type="int" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="CustomerAppController" package="busstation" visibility="public" xPosition="1553.0" yPosition="20.0">
+      <Fields>
+        <Field name="holderpane" type="Pane" visibility="private"/>
+        <Field name="home" type="AnchorPane" visibility="package"/>
+        <Field name="Allpane" type="AnchorPane" visibility="private"/>
+        <Field name="homeBtn" type="Button" visibility="private"/>
+        <Field name="myticketBtn" type="Button" visibility="private"/>
+        <Field name="noticketLabel" type="Label" visibility="private"/>
+        <Field name="contactBtn" type="Button" visibility="private"/>
+        <Field name="notificationLabel" type="Label" visibility="private"/>
+        <Field name="signoutBtn" type="Button" visibility="private"/>
+        <Field name="notification" type="String" visibility="public"/>
+        <Field name="no_tickets" type="String" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="home" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="tickets" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="setnode" returnType="void" visibility="private">
+          <Argument type="Node" name="node"/>
+        </Method>
+        <Method name="setnode2" returnType="void" visibility="private">
+          <Argument type="Node" name="node"/>
+        </Method>
+        <Method name="createpage" returnType="void" visibility="public"/>
+        <Method name="createmyTickets" returnType="void" visibility="public"/>
+        <Method name="signout" returnType="void" visibility="public"/>
+        <Method name="notifications" returnType="void" visibility="public"/>
+        <Method name="setnumber" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CustomerMenuController" package="busstation" visibility="public" xPosition="2168.0" yPosition="20.0">
+      <Fields>
+        <Field name="internalBusText" type="TextArea" visibility="private"/>
+        <Field name="internalbusbookBTN" type="Button" visibility="private"/>
+        <Field name="internalbuscombo" type="ComboBox" visibility="private"/>
+        <Field name="internalBusTicketno" type="Label" visibility="private"/>
+        <Field name="internalBusincBtn" type="Button" visibility="private"/>
+        <Field name="internalBusdecBtn" type="Button" visibility="private"/>
+        <Field name="internalBusOnewayRadio" type="RadioButton" visibility="private"/>
+        <Field name="trip" type="ToggleGroup" visibility="private"/>
+        <Field name="internalBusRoundtripRadioBtn" type="RadioButton" visibility="private"/>
+        <Field name="externalBusText" type="TextArea" visibility="private"/>
+        <Field name="externalbusbookBTN" type="Button" visibility="private"/>
+        <Field name="externalBusTicketno" type="Label" visibility="private"/>
+        <Field name="externalBusincBtn" type="Button" visibility="private"/>
+        <Field name="externalBuscombo" type="ComboBox" visibility="private"/>
+        <Field name="externalBusOnewayRadio" type="RadioButton" visibility="private"/>
+        <Field name="trip1" type="ToggleGroup" visibility="private"/>
+        <Field name="externalBusRoundtripRadio" type="RadioButton" visibility="private"/>
+        <Field name="externalBusdecbtn" type="Button" visibility="private"/>
+        <Field name="internalMiniText" type="TextArea" visibility="private"/>
+        <Field name="internalminibookBTN" type="Button" visibility="private"/>
+        <Field name="internalMinicombo" type="ComboBox" visibility="private"/>
+        <Field name="internalMiniTicketno" type="Label" visibility="private"/>
+        <Field name="internalMiniincBtn" type="Button" visibility="private"/>
+        <Field name="internalMinidecBtn" type="Button" visibility="private"/>
+        <Field name="internalMiniOnewayRadio" type="RadioButton" visibility="private"/>
+        <Field name="trip11" type="ToggleGroup" visibility="private"/>
+        <Field name="internalMiniRoundtripRadio" type="RadioButton" visibility="private"/>
+        <Field name="externalMiniText" type="TextArea" visibility="private"/>
+        <Field name="externalminibookBTN" type="Button" visibility="private"/>
+        <Field name="externalMiniTicketno" type="Label" visibility="private"/>
+        <Field name="externalMiniincBtn" type="Button" visibility="private"/>
+        <Field name="externalMinicombo" type="ComboBox" visibility="private"/>
+        <Field name="externalMiniOnewayRadio" type="RadioButton" visibility="private"/>
+        <Field name="trip13" type="ToggleGroup" visibility="private"/>
+        <Field name="externalMiniRoundtrip" type="RadioButton" visibility="private"/>
+        <Field name="externalMinidecBtn" type="Button" visibility="private"/>
+        <Field name="internalLimosineText" type="TextArea" visibility="private"/>
+        <Field name="internallimosinebookBTN" type="Button" visibility="private"/>
+        <Field name="internallimosinecombo" type="ComboBox" visibility="private"/>
+        <Field name="internalLimosineTicketno" type="Label" visibility="private"/>
+        <Field name="internalLimosineincBtn" type="Button" visibility="private"/>
+        <Field name="internalLimosinedecBtn" type="Button" visibility="private"/>
+        <Field name="internalLimosineOnewayRadio" type="RadioButton" visibility="private"/>
+        <Field name="trip12" type="ToggleGroup" visibility="private"/>
+        <Field name="internalLimosineRoundtripRadio" type="RadioButton" visibility="private"/>
+        <Field name="externalLimosineText" type="TextArea" visibility="private"/>
+        <Field name="externallimosinebookBTN" type="Button" visibility="private"/>
+        <Field name="externalLimosineTicketno" type="Label" visibility="private"/>
+        <Field name="externalLimosineincBtn" type="Button" visibility="private"/>
+        <Field name="externallimosinecombo" type="ComboBox" visibility="private"/>
+        <Field name="externalLimosineOnewayRadio" type="RadioButton" visibility="private"/>
+        <Field name="trip14" type="ToggleGroup" visibility="private"/>
+        <Field name="externalLimosineRoundtripRadio" type="RadioButton" visibility="private"/>
+        <Field name="externalLimosinedecBtn" type="Button" visibility="private"/>
+        <Field name="i" type="int" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="selectinternalonewaybus" returnType="void" visibility="public"/>
+        <Method name="selectexternalonewaybus" returnType="void" visibility="public"/>
+        <Method name="selectinternalonewaymini" returnType="void" visibility="public"/>
+        <Method name="selectexternalonewaymini" returnType="void" visibility="public"/>
+        <Method name="selectinternalonewaylimo" returnType="void" visibility="public"/>
+        <Method name="selectexternalonewaylimo" returnType="void" visibility="public"/>
+        <Method name="selectinternalroundbus" returnType="void" visibility="public"/>
+        <Method name="selectexternalroundbus" returnType="void" visibility="public"/>
+        <Method name="selectinternalroundmini" returnType="void" visibility="public"/>
+        <Method name="selectexternalroundmini" returnType="void" visibility="public"/>
+        <Method name="selectinternalroundlimo" returnType="void" visibility="public"/>
+        <Method name="selectexternalroundlimo" returnType="void" visibility="public"/>
+        <Method name="setallradio" returnType="void" visibility="package"/>
+        <Method name="closeallbook" returnType="void" visibility="package"/>
+        <Method name="fillsplit" returnType="void" visibility="public">
+          <Argument type="int" name="x"/>
+        </Method>
+        <Method name="print1" returnType="void" visibility="public"/>
+        <Method name="print2" returnType="void" visibility="public"/>
+        <Method name="print3" returnType="void" visibility="public"/>
+        <Method name="print4" returnType="void" visibility="public"/>
+        <Method name="print5" returnType="void" visibility="public"/>
+        <Method name="print6" returnType="void" visibility="public"/>
+        <Method name="book1" returnType="void" visibility="public"/>
+        <Method name="book2" returnType="void" visibility="public"/>
+        <Method name="book3" returnType="void" visibility="public"/>
+        <Method name="book4" returnType="void" visibility="public"/>
+        <Method name="book5" returnType="void" visibility="public"/>
+        <Method name="book6" returnType="void" visibility="public"/>
+        <Method name="printall" returnType="void" visibility="package"/>
+      </Methods>
+    </Class>
+    <Class name="Driver" package="busstation" visibility="public" xPosition="53.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+          <Argument type="String" name="first"/>
+          <Argument type="String" name="last"/>
+          <Argument type="String" name="age"/>
+          <Argument type="String" name="gender"/>
+          <Argument type="String" name="nationality"/>
+          <Argument type="String" name="vechile"/>
+          <Argument type="String" name="hours"/>
+          <Argument type="String" name="trips"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="DriverAppController" package="busstation" visibility="public" xPosition="944.0" yPosition="814.0">
+      <Fields>
+        <Field name="holderpane" type="Pane" visibility="private"/>
+        <Field name="home" type="AnchorPane" visibility="package"/>
+        <Field name="Allpane" type="AnchorPane" visibility="private"/>
+        <Field name="notificationLabel" type="Label" visibility="private"/>
+        <Field name="infoBtn" type="Button" visibility="private"/>
+        <Field name="tripsBtn" type="Button" visibility="private"/>
+        <Field name="signoutBtn" type="Button" visibility="private"/>
+        <Field name="notification" type="String" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="setnode" returnType="void" visibility="private">
+          <Argument type="Node" name="node"/>
+        </Method>
+        <Method name="setnode2" returnType="void" visibility="private">
+          <Argument type="Node" name="node"/>
+        </Method>
+        <Method name="createinfo" returnType="void" visibility="public"/>
+        <Method name="createtrips" returnType="void" visibility="public"/>
+        <Method name="signout" returnType="void" visibility="public"/>
+        <Method name="notifications" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="DriverinfoController" package="busstation" visibility="public" xPosition="1553.0" yPosition="560.0">
+      <Fields>
+        <Field name="firstnamelbl" type="Label" visibility="private"/>
+        <Field name="lastnamelbl" type="Label" visibility="private"/>
+        <Field name="agelbl" type="Label" visibility="private"/>
+        <Field name="genderlbl" type="Label" visibility="private"/>
+        <Field name="vehiclelbl" type="Label" visibility="private"/>
+        <Field name="hourslbl" type="Label" visibility="private"/>
+        <Field name="tripslbl" type="Label" visibility="private"/>
+        <Field name="nationlbl" type="Label" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="printall" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="DrivertripsController" package="busstation" visibility="public" xPosition="944.0" yPosition="20.0">
+      <Fields>
+        <Field name="txt" type="TextArea" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="print" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="Files" package="busstation" visibility="public" xPosition="1241.0" yPosition="856.0">
+      <Fields>
+        <Field name="customer" type="BufferedWriter" visibility="private"/>
+        <Field name="manager" type="BufferedWriter" visibility="private"/>
+        <Field name="driver" type="BufferedWriter" visibility="private"/>
+        <Field name="trips" type="BufferedWriter" visibility="private"/>
+        <Field name="addedtrips" type="BufferedWriter" visibility="private"/>
+        <Field name="form" type="Formatter" visibility="private"/>
+        <Field name="x" type="Scanner" visibility="private"/>
+        <Field name="y" type="Scanner" visibility="private"/>
+        <Field name="z" type="Scanner" visibility="private"/>
+        <Field name="t" type="Scanner" visibility="private"/>
+        <Field name="tt" type="Scanner" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="openCustomerFile" returnType="void" visibility="public"/>
+        <Method name="openManagerFile" returnType="void" visibility="public"/>
+        <Method name="openDriverFile" returnType="void" visibility="public"/>
+        <Method name="openTripsFile" returnType="void" visibility="public"/>
+        <Method name="openaddedtripsFile" returnType="void" visibility="public"/>
+        <Method name="writeCustomer" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="writeManager" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="writeDriver" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+          <Argument type="String" name="first"/>
+          <Argument type="String" name="last"/>
+          <Argument type="String" name="age"/>
+          <Argument type="String" name="gender"/>
+          <Argument type="String" name="nationality"/>
+          <Argument type="String" name="vechile"/>
+          <Argument type="String" name="hours"/>
+          <Argument type="String" name="trips"/>
+        </Method>
+        <Method name="writeTrips" returnType="void" visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="source"/>
+          <Argument type="String" name="dest"/>
+          <Argument type="String" name="stops"/>
+          <Argument type="String" name="vehicle"/>
+          <Argument type="String" name="type"/>
+          <Argument type="String" name="way"/>
+          <Argument type="String" name="price"/>
+          <Argument type="String" name="trip_ID"/>
+        </Method>
+        <Method name="writeaddedTrips" returnType="void" visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="source"/>
+          <Argument type="String" name="dest"/>
+          <Argument type="String" name="stops"/>
+          <Argument type="String" name="vehicle"/>
+          <Argument type="String" name="type"/>
+          <Argument type="String" name="price"/>
+          <Argument type="String" name="seats"/>
+          <Argument type="String" name="driverid"/>
+        </Method>
+        <Method name="openCustomerRead" returnType="void" visibility="public"/>
+        <Method name="readCustomer" returnType="void" visibility="public"/>
+        <Method name="openManagerRead" returnType="void" visibility="public"/>
+        <Method name="readManager" returnType="void" visibility="public"/>
+        <Method name="openDriverRead" returnType="void" visibility="public"/>
+        <Method name="readdriver" returnType="void" visibility="public"/>
+        <Method name="openTripsRead" returnType="void" visibility="public"/>
+        <Method name="readTrips" returnType="void" visibility="public"/>
+        <Method name="openaddTripsRead" returnType="void" visibility="public"/>
+        <Method name="readaddTrips" returnType="void" visibility="public"/>
+        <Method name="getTickedbyid" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="closeFiles" returnType="void" visibility="public"/>
+        <Method name="edit" returnType="void" visibility="public">
+          <Argument type="int" name="line"/>
+        </Method>
+        <Method name="readalltrips" returnType="void" visibility="public"/>
+        <Method name="deletetrip" returnType="void" visibility="public">
+          <Argument type="int" name="line"/>
+        </Method>
+        <Method name="getdrivertripsbyid" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="printtrips" returnType="void" visibility="public">
+          <Argument type="String" name="vtype"/>
+          <Argument type="String" name="ttype"/>
+        </Method>
+        <Method name="printtrips2" returnType="void" visibility="public">
+          <Argument type="String" name="vtype"/>
+          <Argument type="String" name="ttype"/>
+        </Method>
+        <Method name="String_cmp" returnType="boolean" visibility="public">
+          <Argument type="String" name="str1"/>
+          <Argument type="String" name="str2"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Manager" package="busstation" visibility="public" xPosition="53.0" yPosition="176.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="ManagerAppController" package="busstation" visibility="public" xPosition="1254.0" yPosition="408.0">
+      <Fields>
+        <Field name="holderpane" type="Pane" visibility="private"/>
+        <Field name="home" type="AnchorPane" visibility="package"/>
+        <Field name="Allpane" type="AnchorPane" visibility="private"/>
+        <Field name="showBtn" type="Button" visibility="private"/>
+        <Field name="addBtn" type="Button" visibility="private"/>
+        <Field name="signoutBtn" type="Button" visibility="private"/>
+        <Field name="notificationLabel" type="Label" visibility="private"/>
+        <Field name="notification" type="String" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="showall" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="addttrips" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="setnode" returnType="void" visibility="private">
+          <Argument type="Node" name="node"/>
+        </Method>
+        <Method name="setnode2" returnType="void" visibility="private">
+          <Argument type="Node" name="node"/>
+        </Method>
+        <Method name="createshowall" returnType="void" visibility="public"/>
+        <Method name="createaddtrip" returnType="void" visibility="public"/>
+        <Method name="signout" returnType="void" visibility="public"/>
+        <Method name="notifications" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Person" package="busstation" visibility="public" xPosition="551.0" yPosition="176.0">
+      <Fields>
+        <Field name="username" type="String" visibility="private"/>
+        <Field name="password" type="String" visibility="private"/>
+        <Field name="notifications" type="int" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setUsername" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="setPassword" returnType="void" visibility="public">
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="compare" returnType="boolean" visibility="public">
+          <Argument type="String" name="str1"/>
+          <Argument type="String" name="str2"/>
+        </Method>
+        <Method name="checkLogin" returnType="boolean" visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SignupController" package="busstation" visibility="public" xPosition="1865.0" yPosition="20.0">
+      <Fields>
+        <Field name="signupBtn" type="Button" visibility="private"/>
+        <Field name="usernamelbl" type="TextField" visibility="private"/>
+        <Field name="passlbl" type="PasswordField" visibility="private"/>
+        <Field name="repasslbl" type="PasswordField" visibility="private"/>
+        <Field name="passengerRadio" type="RadioButton" visibility="private"/>
+        <Field name="managerRadio" type="RadioButton" visibility="private"/>
+        <Field name="type" type="ToggleGroup" visibility="private"/>
+        <Field name="driverRadio" type="RadioButton" visibility="private"/>
+        <Field name="loginBtn" type="Button" visibility="private"/>
+        <Field name="username" type="String" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="signupAction" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="login" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+        <Method name="selectpassanger" returnType="void" visibility="public"/>
+        <Method name="selectManager" returnType="void" visibility="public"/>
+        <Method name="selectDriver" returnType="void" visibility="public"/>
+        <Method name="createUser" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Trip" package="busstation" visibility="public" xPosition="927.0" yPosition="1217.0">
+      <Fields>
+        <Field name="sourse" type="String" visibility="private"/>
+        <Field name="destination" type="String" visibility="private"/>
+        <Field name="number_stops" type="String" visibility="private"/>
+        <Field name="vechile_type" type="String" visibility="private"/>
+        <Field name="trip_type" type="String" visibility="private"/>
+        <Field name="way_type" type="String" visibility="private"/>
+        <Field name="price" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getSourse" returnType="String" visibility="public"/>
+        <Method name="setSourse" returnType="void" visibility="public">
+          <Argument type="String" name="sourse"/>
+        </Method>
+        <Method name="getDestination" returnType="String" visibility="public"/>
+        <Method name="setDestination" returnType="void" visibility="public">
+          <Argument type="String" name="destination"/>
+        </Method>
+        <Method name="getNumber_stops" returnType="String" visibility="public"/>
+        <Method name="setNumber_stops" returnType="void" visibility="public">
+          <Argument type="String" name="number_stops"/>
+        </Method>
+        <Method name="getVechile_type" returnType="String" visibility="public"/>
+        <Method name="setVechile_type" returnType="void" visibility="public">
+          <Argument type="String" name="vechile_type"/>
+        </Method>
+        <Method name="getTrip_type" returnType="String" visibility="public"/>
+        <Method name="setTrip_type" returnType="void" visibility="public">
+          <Argument type="String" name="trip_type"/>
+        </Method>
+        <Method name="getWay_type" returnType="String" visibility="public"/>
+        <Method name="setWay_type" returnType="void" visibility="public">
+          <Argument type="String" name="way_type"/>
+        </Method>
+        <Method name="getPrice" returnType="String" visibility="public"/>
+        <Method name="setPrice" returnType="void" visibility="public">
+          <Argument type="String" name="price"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TripsController" package="busstation" visibility="public" xPosition="944.0" yPosition="176.0">
+      <Fields>
+        <Field name="holderpane" type="AnchorPane" visibility="private"/>
+        <Field name="home" type="AnchorPane" visibility="package"/>
+        <Field name="trip1Lbl" type="TextArea" visibility="private"/>
+        <Field name="trip2Lbl" type="TextArea" visibility="private"/>
+        <Field name="trip3Lbl" type="TextArea" visibility="private"/>
+        <Field name="trip4Lbl" type="TextArea" visibility="private"/>
+        <Field name="nomsg" type="Label" visibility="private"/>
+        <Field name="trip1Btn" type="Button" visibility="private"/>
+        <Field name="trip2Btn" type="Button" visibility="private"/>
+        <Field name="trip3Btn" type="Button" visibility="private"/>
+        <Field name="trip4Btn" type="Button" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="setinvisable" returnType="void" visibility="public"/>
+        <Method name="printing" returnType="void" visibility="private"/>
+        <Method name="print1" returnType="void" visibility="private"/>
+        <Method name="print2" returnType="void" visibility="private"/>
+        <Method name="print3" returnType="void" visibility="private"/>
+        <Method name="print4" returnType="void" visibility="private"/>
+        <Method name="cancel1" returnType="void" visibility="public"/>
+        <Method name="cancel2" returnType="void" visibility="public"/>
+        <Method name="cancel3" returnType="void" visibility="public"/>
+        <Method name="cancel4" returnType="void" visibility="public"/>
+        <Method name="setnode" returnType="void" visibility="private">
+          <Argument type="Node" name="node"/>
+        </Method>
+        <Method name="createmyTickets" returnType="void" visibility="public"/>
+        <Method name="setnumber" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="busstation.Customer" target="busstation.Person"/>
+    <IsRelation name="is" source="busstation.Driver" target="busstation.Person"/>
+    <HasRelation name="mycustomer" source="busstation.BusStation" target="busstation.Customer" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="busstation.Manager" target="busstation.Person"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

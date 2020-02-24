@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="267.0" style="-fx-background-color: #a0a2ab;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busstation.DriverinfoController">
+   <children>
+      <Label layoutX="14.0" layoutY="44.0" prefHeight="22.0" prefWidth="79.0" text="First Name:" />
+      <Label layoutX="14.0" layoutY="124.0" prefHeight="21.0" prefWidth="60.0" text="Age:" />
+      <Label layoutX="14.0" layoutY="164.0" prefHeight="21.0" prefWidth="60.0" text="Gender:" />
+      <Label layoutX="14.0" layoutY="244.0" prefHeight="22.0" prefWidth="95.0" text="Vehicle type:" />
+      <Label layoutX="14.0" layoutY="284.0" prefHeight="22.0" prefWidth="155.0" text="Daily working hours:" />
+      <Label layoutX="14.0" layoutY="324.0" prefHeight="22.0" prefWidth="179.0" text="Number of assigned trips:" />
+      <Label fx:id="firstnamelbl" layoutX="109.0" layoutY="44.0" prefHeight="22.0" prefWidth="140.0" />
+      <Label layoutX="14.0" layoutY="84.0" prefHeight="22.0" prefWidth="79.0" text="Last Name:" />
+      <Label fx:id="lastnamelbl" layoutX="109.0" layoutY="84.0" prefHeight="22.0" prefWidth="140.0" />
+      <Label fx:id="agelbl" layoutX="112.0" layoutY="124.0" prefHeight="21.0" prefWidth="60.0" />
+      <Label fx:id="genderlbl" layoutX="109.0" layoutY="163.0" prefHeight="22.0" prefWidth="140.0" />
+      <Label fx:id="vehiclelbl" layoutX="132.0" layoutY="244.0" prefHeight="22.0" prefWidth="120.0" />
+      <Label fx:id="hourslbl" layoutX="197.0" layoutY="284.0" prefHeight="22.0" prefWidth="42.0" />
+      <Label fx:id="tripslbl" layoutX="207.0" layoutY="324.0" prefHeight="22.0" prefWidth="42.0" />
+      <Label layoutX="14.0" layoutY="204.0" prefHeight="22.0" prefWidth="79.0" text="Nationality:" />
+      <Label fx:id="nationlbl" layoutX="109.0" layoutY="204.0" prefHeight="22.0" prefWidth="140.0" />
+   </children>
+</AnchorPane>
